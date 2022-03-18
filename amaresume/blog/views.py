@@ -5,7 +5,6 @@ from .models import Post
 
 def blog(request):
     context = {}
-
     context["dataset"] = Post.objects.all()
     
-    return render(request, 'blog.html', context)
+    return render(request, 'blog/blog.html', context)

@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)9tp8ixr5qmj3b7e%@#mx0+xtz5vhyypp^e%y)*_kj_=en!_r('
+SECRET_KEY = 'hfdslkautrnnshajfgjrkensdfgjhjrhgncv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -51,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-amareteklay-portfoliopro-bxadfkmhssq.ws-eu38.gitpod.io']
 
 ROOT_URLCONF = 'amaresume.urls'
 
@@ -130,5 +132,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "pages/static"),
-     os.path.join(BASE_DIR, "blog/static"),
+    os.path.join(BASE_DIR, "blog/static"),
 )

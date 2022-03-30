@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'ትግርኛ',
 ]
 
 MIDDLEWARE = [
@@ -135,4 +136,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "pages/static"),
     os.path.join(BASE_DIR, "blog/static"),
     os.path.join(BASE_DIR, "users/static"),
+    os.path.join(BASE_DIR, "ትግርኛ/static"),
 )

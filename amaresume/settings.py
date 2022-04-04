@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
     'django_summernote',
     'django.contrib.staticfiles',
     'crispy_forms',
@@ -133,9 +136,18 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "pages/static"),
-    os.path.join(BASE_DIR, "blog/static"),
-    os.path.join(BASE_DIR, "users/static"),
-    os.path.join(BASE_DIR, "ትግርኛ/static"),
-)
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
+                    os.path.join(BASE_DIR, "pages/static"),
+                    os.path.join(BASE_DIR, "blog/static"),
+                    os.path.join(BASE_DIR, "users/static"),
+                    os.path.join(BASE_DIR, "ትግርኛ/static")]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

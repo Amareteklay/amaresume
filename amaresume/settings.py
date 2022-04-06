@@ -62,6 +62,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+
 CSRF_TRUSTED_ORIGINS = ['https://8000-amareteklay-portfoliopro-bxadfkmhssq.ws-eu38.gitpod.io']
 
 ROOT_URLCONF = 'amaresume.urls'

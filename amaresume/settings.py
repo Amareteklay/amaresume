@@ -27,7 +27,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['amaresume.herokuapp.com', 'localhost', 'www.amareteklay.com', 'amareteklay.com']
+ALLOWED_HOSTS = ['amaresume.herokuapp.com', 
+                 'localhost', 
+                 'www.amareteklay.com', 
+                 'amareteklay.com',
+                 'http://www.amareteklay.com',
+                 'https://amareteklay.com']
 
 
 # Application definition

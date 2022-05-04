@@ -2,20 +2,14 @@
 {% extends "pages/base.html" %}
 
 {% block content %}
-<div class="container shadow-lg bg-body rounded" id="container-resume">
+<div class="container shadow-lg bg-body rounded mt-4 min-vh-100" id="container-resume">
     <div class="row">
-      <div class="col-lg-12 resume-content">
-        <h1 class="heading-blue">Hi, I'm Amare.</h1>
+      <div class="col-lg-12">
+        <h1 class="heading-blue p-4 text-center"> Hi, I'm Amare.</h1>
         <p>I am an economist and software developer. I hold a PhD in economics from the Norwegian Uiversity of Life Sciences (NMBU). I have worked as a postdoctoral researcher at the Swedish Uiversity of Agricultural Sciences (SLU).</p>
         <p>My research interests include behavioral responses to different policy incentives as well as the psychology (and behavioral economics) of UX.</p>
-        <p>Technology is affecting our lives like never before. At individual level, its effect is psychological, and hence behavioral. The choices we make everyday are affected by the availability of affective triggers which often sway us away from the homo economicus within us.</p>
-          {% for data in dataset %}.
-
-          {{ data.name }}<br/>
-          {{ data.desc }}<br/>
-          <hr/>
-          {% endfor %}       
-      </div><!-- /.col-lg-8 -->
-    </div><!-- /.row -->
-  </div><!-- /.container -->
+        <p>Technology is affecting our lives like never before. At individual level, its effect is psychological, and hence behavioral. The choices we make everyday are affected by the availability of affective triggers which often sway us away from the homo economicus within us.</p>      
+      </div>
+    </div>
+  </div>
 {% endblock content %}

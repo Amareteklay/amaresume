@@ -4,14 +4,14 @@
 {% block content %}
 
 <div class="container min-vh-100 shadow-lg bg-body rounded" id="container-resume">
-  <div class="row pt-5 mt-5">
+  <div class="row">
     {% for data in dataset %}
     {% if data%}
     <div class="col-lg-12 resume-content">
       <a class="title-link" href="#"><h1>{{ data.title }}</h1></a>
       <p><i class="fa fa-user"></i> {{ data.author}}</p>
      <p>{{ data.content }}</p>
-     <p><a class="btn btn-secondary" href="#">Read more &raquo;</a></p>
+     <p><a class="btn btn-secondary" href="{% blog_detail %}">Read more &raquo;</a></p>
     </div>
     <hr>
     {% endif%}

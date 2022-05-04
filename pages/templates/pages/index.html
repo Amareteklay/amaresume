@@ -1,55 +1,64 @@
 {% extends "pages/base.html" %}
 {% load static %}
 {% block content %}
-<div class="container-fluid">
-  <div class="container-fluid" id="hero-container">
-    <div id="hero-image">
-      <img src="{% static 'pages/images/sun-ray2.png' %}" class="img-fluid" alt="Sun ray">
-      <div id="face-image"> <img src="{% static 'pages/images/Amare.jpg' %}" class="img-fluid" alt="Amare"></div>
-      <div id="hero-text">
-        <h1>Amare Teklay</h1>
+<div class="container-fluid mt-5 pt-5" id="hero-container">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <div id="face-image">
+        <img src="{% static 'pages/images/Amare.jpg' %}" class="img-fluid" alt="Amare">
+      </div>
+      <div id="hero-text mt-5">
+        <h1 class="mt-5">Amare Teklay</h1>
         <h4>Software Developer | Economist </h4>
       </div>
     </div>
-  </div>
-
-  <div class="container shadow-lg bg-body rounded marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-          <div class="card-header">Economics</div>
-          <div class="card-body">
-            <h5 class="card-title">I am an Economist</h5>
-            <p class="card-text">Economics taught me about choice and human behavior.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-        </div>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-          <div class="card-header">Technology</div>
-          <div class="card-body">
-            <h5 class="card-title">I am a software developer</h5>
-            <p class="card-text">I did some economic calculations and decided to study software development.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-        </div>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-
-        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-          <div class="card-header">ትግርኛ / Tigrigna</div>
-          <div class="card-body">
-            <h5 class="card-title">ትግርኛ ፅሑፋት</h5>
-            <p class="card-text">ብ ትግርኛ ዝልጥፎም ፅሑፋት ኣብዚ መንጠሪ ብምጥዋቕ ትረኽቡ።</p>
-            <p><a class="btn btn-secondary" href="{% url 'tiglog' %}">ምርሐኒ &raquo;</a></p>
-          </div>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-    </div>
+    <div class="col-md-3">
     </div>
   </div>
-  {% endblock content %}
+  <div class="row min-vh-100 mt-5 mt-5 pt-5">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">Economics</div>
+        <div class="card-body">
+          <h5 class="card-title">I am an Economist</h5>
+          <p class="card-text">Economics taught me about choice and human behavior.</p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mx-4">
+      <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Technology</div>
+        <div class="card-body">
+          <h5 class="card-title">I am a software developer</h5>
+          <p class="card-text">I did some economic calculations and decided to study software development.</p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">ትግርኛ / Tigrigna</div>
+        <div class="card-body">
+          <h5 class="card-title">ትግርኛ ፅሑፋት</h5>
+          <p class="card-text">ብ ትግርኛ ዝልጥፎም ፅሑፋት ኣብዚ መንጠሪ ብምጥዋቕ ትረኽቡ።</p>
+          <p><a class="btn btn-secondary" href="{% url 'tiglog' %}">ምርሐኒ &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row min-vh-100 pt-5">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+{% endblock content %}

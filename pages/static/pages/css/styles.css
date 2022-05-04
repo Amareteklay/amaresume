@@ -1,5 +1,16 @@
 body {
-    background-color: #fff;  
+    background-color: #fff; 
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Exo', sans-serif;
+  font-size: 380%; 
+}
+
+p {
+  font-size: 150%;
+  font-weight: 400;
 }
 
 .navbar {
@@ -39,13 +50,13 @@ border-color: aquamarine;
 }
 
 #face-image img {
-  width: 160px;
-  height: 160px;
-  border-radius: 80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
   border: #056674 3px solid;
   position: absolute;
-  left: 45px;
-  top: 65px;
+  left: 200px;
+  top: 45px;
 }
 
 .navbar-light .navbar-brand, 

@@ -18,13 +18,18 @@ p {
     padding-right: 5rem;
 }
 
-.nav-item a.nav-link:hover {
+.nav-item a.nav-link:hover, .text-salmon {
   color: lightsalmon !important;
 }
 
-#hero-container {
-  width: 100%;
-  position: relative;
+.hero-area {
+  background: rgb(1,120,126);
+  background: linear-gradient(90deg, rgba(1,120,126,1) 31%, rgba(5,102,116,1) 77%);
+}
+
+.right-cards {
+  background: rgb(1,120,126);
+  background: linear-gradient(90deg, rgba(5,102,116,1), 31% rgba(1,120,126,1) 77%);
 }
 
 #hero-image {
@@ -50,13 +55,18 @@ border-color: aquamarine;
 }
 
 #face-image img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
   border: #056674 3px solid;
-  position: absolute;
-  left: 200px;
-  top: 45px;
+}
+
+.side-bar {
+  background-color: rgba(5, 102, 116, 0.75);
+  height: 25vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-light .navbar-brand, 

@@ -1,34 +1,28 @@
 {% extends "pages/base.html" %}
 {% load static %}
 {% block content %}
-    <!-- Main -->
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-8">
-          <div id="face-image" class="text-center">
-            <img src="{% static 'pages/images/Amare.jpg' %}" class="img-fluid" alt="Amare">
-          </div>
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-8 text-center">
-            <h3 class="mt-2">Amare Teklay Hailu</h3>
-            <h4>Software Developer | Economist </h4>
-            <a class="btn btn-secondary" href="#">Download my CV <i class="fas fa-download"></i></a>
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-12 shadow-lg p-4">
-              <p class="card-text">Gold mining was my first summer job. Perhaps second. I was a goatherder too. I studied Economics and Software Development.</p>
-              <p>I am interested in Data Science, where both of my professions meet. Economic choices and decisions remain perrenial. Technology provides better tools.</p>
-              <p><a class="btn btn-secondary" href="{% url 'about' %}">More about me &raquo;</a></p>
-        </div>
-        <div class="col-md-5 shadow-lg p-3 mx-3">
-          
-        </div>
-        
-    </div>
+<!-- Main -->
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-8 text-center">
+    <h4 class="text-muted pt-4">Hi, I'm Amare</h4>
+    <h4>Software Developer and Economist </h4>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+<div class="row mt-4">
+  <div class="col-md-1"></div>
+  <div class="col-md-10 p-4">
+    <p class="card-text">Gold mining was my first summer job. Perhaps second. I was a goatherder too.</p>
+    <p>I studied Economics and Software Development. Data Science is where both meet. Economic choices and decisions
+      remain perennial. Technology provides tools. <a class="btn btn-secondary" href="{% url 'about' %}">More about me
+        &raquo;</a></p>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-md-1"></div>
+  <div class="col-md-10 p-4 text-center">
+    <p><a class="btn btn-secondary" href="{% url 'blog' %}">Read my Stories &raquo;</a></p>
+  </div>
+</div>
 {% endblock content %}

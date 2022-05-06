@@ -22,6 +22,11 @@ p {
   color: lightsalmon !important;
 }
 
+a.nav-link:active {
+color: lightsalmon !important;
+border-bottom: lightsalmon 2px solid;
+}
+
 .hero-area {
   background: rgb(1,120,126);
   background: linear-gradient(90deg, rgba(1,120,126,1) 31%, rgba(5,102,116,1) 77%);
@@ -61,18 +66,38 @@ border-color: aquamarine;
   
 }
 
+.right-pane {
+  box-shadow: -10px 0px 10px 1px rgba(5, 102, 116, 0.75);
+}
+
 .side-bar {
   background-color: rgba(5, 102, 116, 0.75);
   height: 25vh;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  left: 0;
+}
+
+#social-icons {
+top: 0;
+right: 0;
+position: fixed;
+}
+
+#copy-right {
+  bottom: 0;
+  position: fixed;
 }
 
 .navbar-light .navbar-brand, 
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
+}
+
+.nav-link {
+  font-size: 1.10rem;
 }
 
 .navbar-collapse {

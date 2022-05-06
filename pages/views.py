@@ -24,3 +24,9 @@ def about(request):
 
 def home(request):
     return render(request, 'pages/home.html')
+
+def project_list(request):
+    return render(request, 'pages/project_list.html', context)
+
+def contact(request):
+    return render(request, 'pages/contact.html')

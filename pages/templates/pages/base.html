@@ -23,7 +23,7 @@
   <div class="container-fluid" id="hero-container">
     <div class="row">
   <!-- Side bar-->
-  <div class="col-md-3 min-vh-100 border side-bar">
+  <aside class="col-md-3 min-vh-100 border side-bar">
     <div class="row">
       <div class="col-md-12 pt-3">
         <h2 class="text-center pt-3 text-salmon">A M A R E</h2>
@@ -44,7 +44,7 @@
             <a class="link-light nav-link" href="{% url 'resume' %}">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="link-light nav-link" href="#">Projects</a>
+            <a class="link-light nav-link" href="{% url 'projects' %}">Projects</a>
           </li>
           <li class="nav-item">
             <a class="link-light nav-link" href="{% url 'blog' %}">Blog</a>
@@ -53,7 +53,7 @@
             <a class="link-light nav-link" href="{% url 'tiglog' %}">ትግርኛ</a>
           </li>
           <li class="nav-item">
-            <a class="link-light nav-link" href="#">Contact</a>
+            <a class="link-light nav-link" href="{% url 'contact' %}">Contact</a>
           </li>
         </ul>
       </div>
@@ -94,12 +94,11 @@
     <div class="row mb-0 mt-5">
       <div class="col-md-12">
         <div class="border-top">
-          <p class="text-center small">Copyright &copy; 2022 <a href="{% url 'index' %}">Amareteklay</a>. All rights
-            reserved.</p>
+          <p class="text-center small">Copyright &copy; 2022 <a href="{% url 'index' %}">Amareteklay</a>.</p>
         </div>
       </div>
     </div>
-  </div>
+  </aside>
   <!--End side bar-->
   <div class="col-md-9">
   {% block content %}

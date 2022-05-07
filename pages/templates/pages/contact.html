@@ -1,36 +1,27 @@
-
 {% extends "pages/base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
     <div class="row min-vh-100">
-      <div class="col-lg-12">
-        <h1 class="heading-blue p-4 mt-5 text-center"> Contact me</h1>
+      <div class="col-lg-12" id="contact-page">
+        <h1 class="heading-blue p-4 text-salmon mt-5 text-center"> Contact me</h1>
         <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-4">
+          <div class="col-md-1"></div>
+          <div class="col-md-4 p-2 contact-form">
             <div class="container">
-              <form action="#" class="form form-control">
-            
-                <label for="fname">Name:</label>
-                <input type="text" id="fname" name="firstname" placeholder="Type your name...">
-
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject...">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your message..." style="height:200px"></textarea>
-                <input class="btn btn-success" type="submit" value="Submit">
-            
-              </form>
+              <form action="" method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input class="btn btn-primary p-1 mt-2" type="submit" value="Submit">
+             </form>
             </div>
           </div>
-          <div class="col-md-3">
-            <p class="text-success"><i class="fa-solid fa-location-dot"></i></p>
-            <p>Marina Gränsen 14k, 936 32</p>
-            <p>Boliden, Sweden</p>
-           <p> <i class="fa-solid fa-mobile"></i></p>
-            <p>+46708856461</p>
-           <p> <i class="fa-solid fa-envelope"></i></p>
-            <p>amareteklay@gmail.com</p>
+          <div class="col-md-2"></div>
+          <div class="col-md-4 mx-2 pt-5 contact-info text-center">
+            <i class="fas fa-map-marker-alt"></i>
+              <p> Marina Gränsen 14k, 936 32 <br> Boliden, Sweden</p>
+           <p> <i class="fas fa-mobile"></i> +46708856461</p>
+           <p><i class="fas fa-envelope"></i> amareteklay@gmail.com</p>
           </div>
         </div>
       </div>

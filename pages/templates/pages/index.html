@@ -2,27 +2,37 @@
 {% load static %}
 {% block content %}
 <!-- Main -->
-<div class="row">
+<div class="row mt-5">
   <div class="col-md-1"></div>
-  <div class="col-md-8 text-center">
-    <h4 class="text-muted pt-4">Hi, I'm Amare</h4>
-    <h4>Software Developer and Economist </h4>
-  </div>
-  <div class="col-md-2"></div>
-</div>
-<div class="row mt-4">
-  <div class="col-md-1"></div>
-  <div class="col-md-10 p-4">
-    <p class="card-text">Gold mining was my first summer job. Perhaps second. I was a goatherder too.</p>
-    <p>I studied Economics and Software Development. Data Science is where both meet. Economic choices and decisions
-      remain perennial. Technology provides tools. <a class="btn btn-secondary" href="{% url 'about' %}">More about me
+  <div class="col-md-5 text-center mt-3">
+    <h3 class="text-muted pt-4">Hello, I'm Amare.</h3>
+    <h4 class="mb-2 py-2"><strong>Software Developer & Economist </strong></h4>
+    <p class="card-text mt-3">Gold mining was my first summer job. Perhaps second. I was a goatherder too.</p>
+    <p>I studied Economics and Software Development. Economic choices and decisions
+      remain perennial. Technology provides tools. Data Science is where both meet.<a class="btn text-salmon" href="{% url 'about' %}">More about me
         &raquo;</a></p>
   </div>
+  <div class="col-md-3" id="home-right"></div>
 </div>
-<div class="row mt-4">
-  <div class="col-md-1"></div>
-  <div class="col-md-10 p-4 text-center">
-    <p><a class="btn btn-secondary" href="{% url 'blog' %}">Read my Stories &raquo;</a></p>
+
+<div class="row mt-1">
+  <div class="col-md-3 px-2" id="home-left"></div>
+  <div class="col-md-5 text-center mt-3">
+    <h3 class="text-muted pt-4">Stories</h3>
+    <h4 class="mb-2 py-2"><strong>I have many stories to tell you. I will try to write as often as possible.</strong></h4>
+    <p class="card-text mt-3">Follow the link below to see all articles in my blog.</p>
+    <p>Amare's stories: past, present, future are all listed in the blog.<a class="btn text-salmon" href="{% url 'about' %}">Amare's stories &raquo;</a></p>
   </div>
+  <div class="col-md-1"></div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-1"></div>
+  <div class="col-md-5 text-center mt-3">
+        <h3 class="text-muted pt-4">ትግርኛ/Tigrigna</h3>
+        <p class="card-text mt-3">ብ ትግርኛ ዝፅሕፎም ፅሑፋት ንምርኣይ ኣብ ታሕቲ ዘሎ መንጠሪ ብምጥዋቕ ይኸፍቱ።</p>
+        <p><a class="btn text-salmon" href="{% url 'tiglog' %}">ምርሐኒ &raquo;</a></p>
+  </div>
+  <div class="col-md-3" id="home-right-tig"></div>
 </div>
 {% endblock content %}

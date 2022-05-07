@@ -9,8 +9,13 @@ h1, h2, h3 {
 }
 
 p {
-  font-size: 150%;
+  font-size: 120%;
   font-weight: 400;
+}
+
+.left-border {
+  border-left: #056674 90px solid;
+  line-height: 0.4em;
 }
 
 .navbar {
@@ -66,10 +71,6 @@ border-color: aquamarine;
   
 }
 
-.right-pane {
-  box-shadow: -10px 0px 10px 1px rgba(5, 102, 116, 0.75);
-}
-
 .side-bar {
   background-color: rgba(5, 102, 116, 0.75);
   height: 25vh;
@@ -79,6 +80,91 @@ border-color: aquamarine;
   left: 0;
 }
 
+#home-right {
+background-image: url("../images/Amareth.png");
+background-repeat: no-repeat;
+background-position: center;
+min-height: 450px;
+width: 50%;
+border-radius: 300px 0 0 300px;
+}
+
+#home-right-tig {
+  background-image: url("../images/axum.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 450px;
+  width: 50%;
+  border-radius: 300px 0 0 300px;
+  margin-right: 0;
+  }
+
+  #home-left {
+    background-image: url("../images/bird.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    width: 50%;
+    border-radius: 0 300px 300px 0;
+    margin-left: 10px;
+    }
+
+
+#project-ml {
+      background-image: url("../images/project-ml.jpeg");
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 450px;
+      width: 50%;
+      opacity: 0.5;
+      border-radius: 450px 0 0 450px;
+}
+
+#project-quteba {
+  background-image: url("../images/quteba.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 450px;
+  width: 50%;
+  border-radius: 0 300px 300px 0;
+  margin-left: 10px;
+  }
+
+#project-quiz {
+  background-image: url("../images/sdg-quiz.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 450px;
+  width: 50%;
+  border-radius: 300px 0 0 300px;
+  margin-right: 0;
+  }
+
+#project-game {
+  background-image: url("../images/rspls.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 450px;
+  width: 50%;
+  border-radius: 0 300px 300px 0;
+  margin-left: 10px;
+  }
+
+#project-jung {
+  background-image: url("../images/cgjung.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 450px;
+  width: 50%;
+  border-radius: 300px 0 0 300px;
+  margin-right: 0;
+  }
 #social-icons {
 top: 0;
 right: 0;
@@ -88,6 +174,21 @@ position: fixed;
 #copy-right {
   bottom: 0;
   position: fixed;
+}
+
+td {
+text-align: left;
+}
+
+.about-page {
+margin-left: 1px;
+background-color: rgba(51, 51, 51, 0.2);
+border-radius: 0 50% 0 50%;
+}
+
+.res-pitch {
+  background-color: rgba(5, 102, 116, 0.2);
+  border-radius: 0 20% 0 25%;
 }
 
 .navbar-light .navbar-brand, 

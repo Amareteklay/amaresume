@@ -23,7 +23,7 @@
   <div class="container-fluid" id="hero-container">
     <div class="row">
       <!-- Side bar-->
-      <aside class="col-md-3 min-vh-100 side-bar">
+      <aside class="col-md-2 min-vh-100 side-bar">
         <div class="row">
           <div id="face-image" class="text-center">
             <img src="{% static 'pages/images/Amare.jpg' %}" class="img-fluid" alt="Amare">
@@ -64,7 +64,6 @@
           <div class="col-md-4">
           </div>
         </div>
-        <div class="row row-push"></div>
         <div class="row mt-5">
           <div class="col-md-3"></div>
           <div class="col-md-1">
@@ -94,16 +93,16 @@
           </div>
         </div>
         <!--Copy right-->
-        <div class="row mb-0" id="copy-right">
+        <div class="row" id="copy-right">
           <div class="col-md-12 px-5">
             <div class="border-top px-4">
-              <p class="text-center small ">Copyright &copy; 2022 <a href="{% url 'index' %}">Amareteklay</a>.</p>
+              <p class="text-center small text-white">Copyright &copy; 2022 <a class="text-salmon" href="{% url 'index' %}">Amareteklay</a></p>
             </div>
           </div>
         </div>
       </aside>
       <!--End side bar-->
-      <div class="col-md-9 right-pane">
+      <div class="col-md-10">
         <div class="row pt-4" id="social-icons">
           <div class="col-md-3"></div>
           <div class="col-md-1">
@@ -131,6 +130,37 @@
 
         {% block content %}
         {% endblock content %}
+        <div class="container container-footer">
+          <footer class="py-5 text-center text-white">
+                  <!-- Facebook -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/amareteklay.hailu" target="_blank" role="button"
+                     ><i class="fab fa-facebook-f"></i
+                    ></a>
+        
+                  <!-- Twitter -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/Amareteklay" target="_blank" role="button"
+                     ><i class="fab fa-twitter"></i
+                    ></a>
+        
+                  <!-- Google -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/channel/UCITdwO40X0bb6JFS5sMetfg" target="_blank" role="button"
+                     ><i class="fab fa-youtube"></i
+                    ></a>
+        
+                  <!-- Linkedin -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/amareteklay/" target="_blank" role="button"
+                     ><i class="fab fa-linkedin-in"></i
+                    ></a>
+        
+                  <!-- Github -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="hub.com/Amareteklay/" target="_blank" role="button"
+                     ><i class="fab fa-github"></i
+                    ></a>
+              <div class="border-top px-4">
+                <p class="text-center small text-white">Copyright &copy; 2022 <a class="text-salmon" href="{% url 'index' %}">Amareteklay</a></p>
+          </div>
+          </footer>
+        </div>
       </div>
     </div>
   </div>

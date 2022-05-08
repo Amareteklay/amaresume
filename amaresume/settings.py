@@ -70,7 +70,7 @@ MIDDLEWARE = [
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-amareteklay-portfoliopro-bxadfkmhssq.ws-eu43.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-amareteklay-portfoliopro-bxadfkmhssq.ws-eu44.gitpod.io']
 
 ROOT_URLCONF = 'amaresume.urls'
 

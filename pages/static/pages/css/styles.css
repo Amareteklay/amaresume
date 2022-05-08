@@ -188,15 +188,16 @@ border-radius: 50% 0 50% 0;
 
 
 .contact-info {
-  background-color: rgba(24, 20, 20, 0.9);
+  background-color: rgba(5, 102, 116, 0.9);
   border-radius: 0 50% 50% 0;
-  border-left: #056674 2px solid;
+  border-left: rgb(5, 102, 116) 2px solid;
   border-top: #056674 2px solid;
   color: #fff;
+  min-height: 300px;
 }
 
 .contact-form {
-  background-color: rgba(22, 20, 20, 0.9);
+  background-color: rgba(5, 102, 116, 0.9);
   border-radius: 0;
   border-right: #056674 2px solid;
   border-bottom: #056674 2px solid;

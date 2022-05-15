@@ -24,144 +24,150 @@
     <div class="row">
       <!-- Side bar-->
       <aside class="col-md-2 min-vh-100 side-bar">
-        <div class="row">
-          <div id="face-image" class="text-center">
-            <img src="{% static 'pages/images/Amare.jpg' %}" class="img-fluid" alt="Amare">
-          </div>
-          <div class="col-md-12 pt-2 text-center">
-            <strong class="pt-2 text-salmon">Amare Teklay</strong>
+        <div class="container">
+          <div class="row">
+            <div id="face-image" class="text-center">
+              <img src="{% static 'pages/images/Amare.jpg' %}" class="img-fluid" alt="Amare">
+            </div>
+            <div class="col-md-12 pt-2 text-center">
+              <strong class="pt-2 text-salmon">Amare Teklay</strong>
+            </div>
           </div>
         </div>
-        <div class="row pt-4">
-          <div class="col-md-4">
+        <div class="container">
+          <div class="row pt-4">
+            <div class="col-md-4 pt-2 ">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+                <li class="nav-item">
+                  <a class="link-light nav-link active p-1" aria-current="page" href="{% url 'index' %}"><i
+                      class="fa-solid fa-house"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link-light nav-link p-1" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link-light nav-link p-1" href="{% url 'resume' %}">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link-light nav-link p-1" href="{% url 'projects' %}">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link-light nav-link p-1" href="{% url 'blog' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link-light nav-link p-1" href="{% url 'tiglog' %}">ትግርኛ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link-light nav-link p-1" href="{% url 'contact' %}">Contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-4 pt-2 px-4">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
-              <li class="nav-item">
-                <a class="link-light nav-link active p-1" aria-current="page" href="{% url 'index' %}"><i
-                    class="fa-solid fa-house"></i> Home</a>
+        </div>
+        <div class="container">
+          <div class="row mt-5 pt-3">
+            <ul class="d-inline-block">
+              <li class="d-inline-block">
+                <!-- Facebook -->
+              <a class="m-1" href="https://www.facebook.com/amareteklay.hailu" target="_blank" role="button"><i
+                  class="fab fa-facebook-f"></i></a>
+                </li>
+              <li class="d-inline-block">
+              <!-- Twitter -->
+              <a class="m-1" href="https://twitter.com/Amareteklay" target="_blank" role="button"><i
+                  class="fab fa-twitter"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="link-light nav-link p-1" href="{% url 'about' %}">About</a>
+              <li class="d-inline-block">
+              <!-- Linkedin -->
+              <a class="m-1" href="https://www.linkedin.com/in/amareteklay/" target="_blank" role="button"><i
+                  class="fab fa-linkedin-in"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="link-light nav-link p-1" href="{% url 'resume' %}">Resume</a>
+              <li class="d-inline-block">
+              <!-- Github -->
+              <a class="m-1" href="http://github.com/Amareteklay/" target="_blank" role="button"><i
+                  class="fab fa-github"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="link-light nav-link p-1" href="{% url 'projects' %}">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="link-light nav-link p-1" href="{% url 'blog' %}">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="link-light nav-link p-1" href="{% url 'tiglog' %}">ትግርኛ</a>
-              </li>
-              <li class="nav-item">
-                <a class="link-light nav-link p-1" href="{% url 'contact' %}">Contact</a>
+              <li class="d-inline-block">
+              <!-- Google -->
+              <a class="m-1" href="https://www.youtube.com/channel/UCITdwO40X0bb6JFS5sMetfg" target="_blank"
+                role="button"><i class="fab fa-youtube"></i></a>
               </li>
             </ul>
-          </div>
-          <div class="col-md-4">
-          </div>
-        </div>
-        <div class="row mt-5 pt-3">
-          <div class="col-md-3"></div>
-          <div class="col-md-1">
-            <!-- Facebook -->
-            <a class="m-1" href="https://www.facebook.com/amareteklay.hailu" target="_blank" role="button"><i
-                class="fab fa-facebook-f"></i></a>
-          </div>
-          <div class="col-md-1">
-            <!-- Twitter -->
-            <a class="m-1" href="https://twitter.com/Amareteklay" target="_blank" role="button"><i
-                class="fab fa-twitter"></i></a>
-          </div>
-          <div class="col-md-1">
-            <!-- Linkedin -->
-            <a class="m-1" href="https://www.linkedin.com/in/amareteklay/" target="_blank" role="button"><i
-                class="fab fa-linkedin-in"></i></a>
-          </div>
-          <div class="col-md-1">
-            <!-- Github -->
-            <a class="m-1" href="http://github.com/Amareteklay/" target="_blank" role="button"><i
-                class="fab fa-github"></i></a>
-          </div>
-          <div class="col-md-1">
-            <!-- Google -->
-            <a class="m-1" href="https://www.youtube.com/channel/UCITdwO40X0bb6JFS5sMetfg" target="_blank"
-              role="button"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <!--Copy right-->
         <div class="row" id="copy-right">
           <div class="col-md-12 px-5">
             <div class="border-top px-4">
-              <p class="text-center small text-white">Copyright &copy; 2022 <a class="text-salmon" href="{% url 'index' %}">Amareteklay</a></p>
+              <p class="text-center small text-white">Copyright &copy; 2022 <a class="text-salmon"
+                  href="{% url 'index' %}">Amareteklay</a></p>
             </div>
           </div>
         </div>
       </aside>
       <!--End side bar-->
-      <div class="col-md-10">
-        <div class="row pt-4" id="social-icons">
-          <div class="col-md-3"></div>
-          <div class="col-md-1">
-            <!-- Linkedin -->
-            <a class="m-1" href="https://www.linkedin.com/in/amareteklay/" target="_blank" role="button"><i
-                class="fab fa-linkedin-in"></i></a>
+      
+        <div class="col-md-10">
+          <div class="row pt-4" id="social-icons">
+            <ul class="d-inline-block">
+              <li class="d-inline-block">
+                <!-- Facebook -->
+              <a class="m-1" href="https://www.facebook.com/amareteklay.hailu" target="_blank" role="button"><i
+                  class="fab fa-facebook-f"></i></a>
+                </li>
+              <li class="d-inline-block">
+              <!-- Twitter -->
+              <a class="m-1" href="https://twitter.com/Amareteklay" target="_blank" role="button"><i
+                  class="fab fa-twitter"></i></a>
+              </li>
+              <li class="d-inline-block">
+              <!-- Linkedin -->
+              <a class="m-1" href="https://www.linkedin.com/in/amareteklay/" target="_blank" role="button"><i
+                  class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li class="d-inline-block">
+              <!-- Github -->
+              <a class="m-1" href="http://github.com/Amareteklay/" target="_blank" role="button"><i
+                  class="fab fa-github"></i></a>
+              </li>
+              <li class="d-inline-block">
+              <!-- Google -->
+              <a class="m-1" href="https://www.youtube.com/channel/UCITdwO40X0bb6JFS5sMetfg" target="_blank"
+                role="button"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
           </div>
-          <div class="col-md-1">
-            <!-- Github -->
-            <a class="m-1" href="http://github.com/Amareteklay/" target="_blank" role="button"><i
-                class="fab fa-github"></i></a>
-          </div>
-          <div class="col-md-1">
-            <!-- Twitter -->
-            <a class="m-1" href="https://twitter.com/Amareteklay" target="_blank" role="button"><i
-                class="fab fa-twitter"></i></a>
-          </div>
-          <div class="col-md-1">
-            <!-- Facebook -->
-            <a class="m-1" href="https://www.facebook.com/amareteklay.hailu" target="_blank" role="button"><i
-                class="fab fa-facebook-f"></i></a>
-          </div>
-          <div class="col-md-4"></div>
-        </div>
 
-        {% block content %}
-        {% endblock content %}
-        <div class="container container-footer">
-          <footer class="py-5 text-center text-white">
-                  <!-- Facebook -->
-                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/amareteklay.hailu" target="_blank" role="button"
-                     ><i class="fab fa-facebook-f"></i
-                    ></a>
-        
-                  <!-- Twitter -->
-                  <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/Amareteklay" target="_blank" role="button"
-                     ><i class="fab fa-twitter"></i
-                    ></a>
-        
-                  <!-- Google -->
-                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/channel/UCITdwO40X0bb6JFS5sMetfg" target="_blank" role="button"
-                     ><i class="fab fa-youtube"></i
-                    ></a>
-        
-                  <!-- Linkedin -->
-                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/amareteklay/" target="_blank" role="button"
-                     ><i class="fab fa-linkedin-in"></i
-                    ></a>
-        
-                  <!-- Github -->
-                  <a class="btn btn-outline-light btn-floating m-1" href="hub.com/Amareteklay/" target="_blank" role="button"
-                     ><i class="fab fa-github"></i
-                    ></a>
+          {% block content %}
+          {% endblock content %}
+          <div class="container container-footer">
+            <footer class="py-5 text-center text-white">
+              <!-- Facebook -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/amareteklay.hailu"
+                target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+
+              <!-- Twitter -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/Amareteklay" target="_blank"
+                role="button"><i class="fab fa-twitter"></i></a>
+
+              <!-- Google -->
+              <a class="btn btn-outline-light btn-floating m-1"
+                href="https://www.youtube.com/channel/UCITdwO40X0bb6JFS5sMetfg" target="_blank" role="button"><i
+                  class="fab fa-youtube"></i></a>
+
+              <!-- Linkedin -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/amareteklay/"
+                target="_blank" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+              <!-- Github -->
+              <a class="btn btn-outline-light btn-floating m-1" href="hub.com/Amareteklay/" target="_blank"
+                role="button"><i class="fab fa-github"></i></a>
               <div class="border-top px-4">
-                <p class="text-center small text-white">Copyright &copy; 2022 <a class="text-salmon" href="{% url 'index' %}">Amareteklay</a></p>
+                <p class="text-center small text-white">Copyright &copy; 2022 <a class="text-salmon"
+                    href="{% url 'index' %}">Amareteklay</a></p>
+            </footer>
           </div>
-          </footer>
         </div>
-      </div>
     </div>
   </div>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

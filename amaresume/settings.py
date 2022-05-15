@@ -147,7 +147,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
+STATICFILES_DIRS = [os.path.join(BASE_DIR / 'static'),
                     os.path.join(BASE_DIR, "pages/static"),
                     os.path.join(BASE_DIR, "blog/static"),
                     os.path.join(BASE_DIR, "users/static"),

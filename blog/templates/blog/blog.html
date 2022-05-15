@@ -12,6 +12,7 @@
           <a class="title-link text-decoration-none" href="#">
             <h3>{{ data.title }}</h3>
           </a>
+          <img src="{{ data.image.url }}" alt="">
           <p class="text-muted">{{ data.author}} | {{data.date_posted|date:"m d, Y"}}</p>
           <p class="pt-3 mt-2">{{ data.content|safe }}</p>
           <p class="mb-5"><a class="btn btn-secondary" href="#">Read more &raquo;</a></p>

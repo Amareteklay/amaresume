@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -7,6 +8,8 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
+    image = CloudinaryField('image', null=True, blank=True)
+    caption = models.CharField(max_length=100, blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 

@@ -81,7 +81,7 @@ border-color: aquamarine;
 }
 
 #home-right {
-background-image: url("../images/Amareth.png");
+background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177453/Amareth_bwxkrv.png");
 background-repeat: no-repeat;
 background-position: center;
 min-height: 450px;
@@ -90,7 +90,7 @@ border-radius: 300px 0 0 300px;
 }
 
 #home-right-tig {
-  background-image: url("../images/axum.jpg");
+  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/axum_o6ajeu.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -101,7 +101,7 @@ border-radius: 300px 0 0 300px;
   }
 
   #home-left {
-    background-image: url("../images/bird.png");
+    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177451/bird_bhaxnw.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -113,7 +113,7 @@ border-radius: 300px 0 0 300px;
 
 
 #project-ml {
-      background-image: url("../images/cloud.jpg");
+      background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/cloud_obmegd.jpg");
       background-repeat: no-repeat;
       background-position: center;
       min-height: 450px;
@@ -123,7 +123,7 @@ border-radius: 300px 0 0 300px;
 }
 
 #project-quteba {
-  background-image: url("../images/quteba.png");
+  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/quteba_kn0fka.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -134,7 +134,7 @@ border-radius: 300px 0 0 300px;
   }
 
 #project-quiz {
-  background-image: url("../images/sdg-quiz.jpg");
+  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/sdg-quiz_b583nf.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -145,7 +145,7 @@ border-radius: 300px 0 0 300px;
   }
 
 #project-game {
-  background-image: url("../images/rspls.jpg");
+  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/rspls_gnzclq.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -156,7 +156,7 @@ border-radius: 300px 0 0 300px;
   }
 
 #project-jung {
-  background-image: url("../images/cgjung.jpg");
+  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/cgjung_pzel9i.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -205,7 +205,7 @@ border-radius: 50% 0 50% 0;
 }
 
 #contact-page {
-  background-image: url("../images/bird.png");
+  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177451/bird_bhaxnw.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -1,307 +1,286 @@
 body {
-    background-color: #fff; 
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: 'Exo', sans-serif;
-  font-size: 380%; 
+h1,
+h2,
+h3 {
+    font-family: 'Exo', sans-serif;
+    font-size: 380%;
 }
 
 p {
-  font-size: 120%;
-  font-weight: 400;
+    font-size: 120%;
+    font-weight: 400;
 }
 
 .left-border {
-  border-left: #056674 90px solid;
-  line-height: 0.4em;
+    border-left: #056674 90px solid;
+    line-height: 0.4em;
 }
 
 .navbar {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    display: none;
 }
 
-.nav-item a.nav-link:hover, .text-salmon {
-  color: lightsalmon !important;
+.nav-item a.nav-link:hover,
+.text-salmon {
+    color: lightsalmon !important;
 }
 
 a.nav-link:active {
-color: lightsalmon !important;
-border-bottom: lightsalmon 2px solid;
+    color: lightsalmon !important;
+    border-bottom: lightsalmon 2px solid;
 }
 
 .hero-area {
-  background: rgb(1,120,126);
-  background: linear-gradient(90deg, rgba(1,120,126,1) 31%, rgba(5,102,116,1) 77%);
+    background: rgb(1, 120, 126);
+    background: linear-gradient(90deg, rgba(1, 120, 126, 1) 31%, rgba(5, 102, 116, 1) 77%);
 }
 
 .right-cards {
-  background: rgb(1,120,126);
-  background: linear-gradient(90deg, rgba(5,102,116,1), 31% rgba(1,120,126,1) 77%);
+    background: rgb(1, 120, 126);
+    background: linear-gradient(90deg, rgba(5, 102, 116, 1), 31% rgba(1, 120, 126, 1) 77%);
 }
 
 #hero-image {
-position: relative;
+    position: relative;
 }
 
 .btn-secondary {
-background-color: aqua;
-border-color: aquamarine;
+    background-color: aqua;
+    border-color: aquamarine;
 }
 
 .btn-secondary:hover {
-  background-color: lightsalmon;
-  border-color: #056674;
-  }
+    background-color: lightsalmon;
+    border-color: #056674;
+}
 
 
 #hero-text {
-  position: absolute;
-  left: 230px;
-  top: 110px;
-  color: #056674;
+    position: absolute;
+    left: 230px;
+    top: 110px;
+    color: #056674;
 }
 
 #face-image img {
-  width: 160px;
-  height: 160px;
-  border-radius: 80px;
-  
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+
+}
+
+#hero-container {
+    margin: 0;
+    padding: 0;
 }
 
 .side-bar {
-  background-color: rgba(5, 102, 116, 0.75);
-  height: 25vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
+    background-color: rgba(5, 102, 116, 0.75);
+    height: 25vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-width: 124px;
 }
 
-#home-right {
-background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177453/Amareth_bwxkrv.png");
-background-repeat: no-repeat;
-background-position: center;
-min-height: 450px;
-width: 50%;
-border-radius: 300px 0 0 300px;
+.img-home-right {
+    width: 100%;
+    height: 100%;
+    border-radius: 300px 0 0 300px;
 }
 
-#home-right-tig {
-  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/axum_o6ajeu.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 480px;
-  width: 50%;
-  border-radius: 300px 0 0 300px;
-  margin-right: 0;
-  }
-
-  #home-left {
-    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177451/bird_bhaxnw.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 500px;
-    width: 50%;
+.img-home-left {
+    width: 100%;
+    height: 100%;
     border-radius: 0 300px 300px 0;
-    margin-left: 10px;
-    }
-
+}
 
 #project-ml {
-      background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/cloud_obmegd.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      min-height: 450px;
-      width: 50%;
-      opacity: 0.5;
-      border-radius: 450px 0 0 450px;
+    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/cloud_obmegd.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 450px;
+    width: 50%;
+    opacity: 0.5;
+    border-radius: 450px 0 0 450px;
 }
 
 #project-quteba {
-  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/quteba_kn0fka.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 450px;
-  width: 50%;
-  border-radius: 0 300px 300px 0;
-  margin-left: 10px;
-  }
+    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/quteba_kn0fka.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    width: 50%;
+    border-radius: 0 300px 300px 0;
+    margin-left: 10px;
+}
 
 #project-quiz {
-  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/sdg-quiz_b583nf.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 450px;
-  width: 50%;
-  border-radius: 300px 0 0 300px;
-  margin-right: 0;
-  }
+    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/sdg-quiz_b583nf.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 450px;
+    width: 50%;
+    border-radius: 300px 0 0 300px;
+    margin-right: 0;
+}
 
 #project-game {
-  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/rspls_gnzclq.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 450px;
-  width: 50%;
-  border-radius: 0 300px 300px 0;
-  margin-left: 10px;
-  }
+    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/rspls_gnzclq.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    width: 50%;
+    border-radius: 0 300px 300px 0;
+    margin-left: 10px;
+}
 
 #project-jung {
-  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/cgjung_pzel9i.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 450px;
-  width: 50%;
-  border-radius: 300px 0 0 300px;
-  margin-right: 0;
-  }
+    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/cgjung_pzel9i.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 450px;
+    width: 50%;
+    border-radius: 300px 0 0 300px;
+    margin-right: 0;
+}
+
 #social-icons {
-top: 0;
-right: 0;
-position: fixed;
+    top: 0;
+    right: 0;
+    position: fixed;
 }
 
 #copy-right {
-  bottom: 0;
-  position: fixed;
+    bottom: 0;
+    position: fixed;
 }
 
 td {
-text-align: left;
+    text-align: left;
 }
 
 .about-page {
-margin-left: 1px;
-background-color: rgba(51, 51, 51, 0.2);
-border-radius: 50% 0 50% 0;
+    margin-left: 1px;
+    background-color: rgba(51, 51, 51, 0.2);
+    border-radius: 50% 0 50% 0;
 }
 
 
 .contact-info {
-  background-color: rgba(5, 102, 116, 0.9);
-  border-radius: 0 50% 50% 0;
-  border-left: rgb(5, 102, 116) 2px solid;
-  border-top: #056674 2px solid;
-  color: #fff;
-  min-height: 300px;
+    background-color: rgba(5, 102, 116, 0.9);
+    border-radius: 0 50% 50% 0;
+    border-left: rgb(5, 102, 116) 2px solid;
+    border-top: #056674 2px solid;
+    color: #fff;
+    min-height: 300px;
 }
 
 .contact-form {
-  background-color: rgba(5, 102, 116, 0.9);
-  border-radius: 0;
-  border-right: #056674 2px solid;
-  border-bottom: #056674 2px solid;
-  color: #fff;
+    background-color: rgba(5, 102, 116, 0.9);
+    border-radius: 0;
+    border-right: #056674 2px solid;
+    border-bottom: #056674 2px solid;
+    color: #fff;
 }
 
 #contact-page {
-  background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177451/bird_bhaxnw.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 150px;
-  }
-.res-pitch {
-  background-color: rgba(5, 102, 116, 0.2);
-  border-radius: 0 20% 0 25%;
+    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177451/bird_bhaxnw.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 150px;
 }
 
-.navbar-light .navbar-brand, 
+.res-pitch {
+    background-color: rgba(5, 102, 116, 0.2);
+    border-radius: 0 20% 0 25%;
+}
+
+.navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link {
-  color: #fff;
+    color: #fff;
 }
 
 .nav-link {
-  font-size: 1.10rem;
-}
-
-.navbar-collapse {
-  padding-left: 60%;
-}
-
-.navbar-collapse .nav-link {
-  padding-left: 20px;
+    font-size: 1.10rem;
 }
 
 .text-container {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 footer,
 .navbar.bg-light {
-  background-color: #056674 !important;
+    background-color: #056674 !important;
 }
 
-.container-footer {
-  max-width: 100% !important;
-  margin-top: 90px;
-  background-color: #056674;
-}
 .container-fluid {
     padding: 0;
 }
 
 #container-resume {
-  position: relative;
-  top: 55px;
-  padding: 30px 150px;
+    position: relative;
+    top: 55px;
+    padding: 30px 150px;
 }
 
 /** Resume skills section */
 
 .progress {
-  position: relative;
-  height: 25px;
-  margin-bottom: 4px;
+    position: relative;
+    height: 25px;
+    margin-bottom: 4px;
 }
 
 .progress-type {
-  position: absolute;
-  left: 0px;
-  font-weight: 400;
-  padding: 3px 30px 2px 10px;
-  color: #fafafa;
-  background-color: rgba(25, 25, 25, 0.2);
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 3px 30px 2px 10px;
+    color: #fafafa;
+    background-color: rgba(25, 25, 25, 0.2);
 }
 
 .progress-section {
-  margin: 40px 20px;
+    margin: 40px 20px;
 }
 
 
 .border-top {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem!important;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem !important;
 }
 
 .border-top a {
-text-decoration: none;
-color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 
 .progress-bar {
-  margin: 3px;
-  height: 30px;
-  }
+    margin: 3px;
+    height: 30px;
+}
 
 .py-5 {
-  padding-bottom: 1.5rem!important;
+    padding-bottom: 1.5rem !important;
 }
 
 p.d-line {
-  background-color: red;
-  color: blue;
+    background-color: red;
+    color: blue;
 }
 
 /*
@@ -313,33 +292,50 @@ p.d-line {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
-  text-shadow: none; 
+    color: #333;
+    text-shadow: none;
 }
 
 
 .cover-container {
-  max-width: 42em;
+    max-width: 42em;
 }
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+    border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+.nav-masthead .nav-link+.nav-link {
+    margin-left: 1rem;
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #056674;
+    color: #fff;
+    border-bottom-color: #056674;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .side-bar {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 900px !important;
+    }
 }

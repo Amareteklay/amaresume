@@ -1,0 +1,61 @@
+{% load static %}
+{% block nav %}
+{% include "pages/navbar.html" %}
+{% endblock nav %}
+<aside class="col-md-2 min-vh-100 p-sm-0 mb-0 side-bar">
+    <div class="container-fluid mb-0">
+        <div id="face-image" class="text-center d-md-block d-sm-none d-none">
+            <img src="{% static 'pages/images/Amare.jpg' %}" class="img-fluid" alt="Amare">
+        </div>
+        <div class="col-md-12 pt-2 text-center d-md-block d-sm-none d-none">
+            <strong class="pt-2 text-salmon">Amare Teklay</strong>
+        </div>
+        <div class="col-md-4 pt-2">
+            <ul class="list-unstyled mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="link-light nav-link active" aria-current="page" href="{% url 'index' %}"><i class="fas fa-home"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link-light nav-link p-1" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="link-light nav-link p-1" href="{% url 'resume' %}">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="link-light nav-link p-1" href="{% url 'projects' %}">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="link-light nav-link p-1" href="{% url 'blog' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="link-light nav-link p-1" href="{% url 'tiglog' %}">ትግርኛ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="link-light nav-link p-1" href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-12 pt-3 d-md-block d-sm-none d-none">
+            <ul class="d-inline-block mx-md-4 mx-sm-1 p-0">
+                <li class="d-inline-block">
+                    <a class="m-1" href="https://www.facebook.com/amareteklay.hailu" target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="d-inline-block">
+                    <a class="m-1" href="https://twitter.com/Amareteklay" target="_blank" role="button"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="d-inline-block">
+                    <a class="m-1" href="https://www.linkedin.com/in/amareteklay/" target="_blank" role="button"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="d-inline-block">
+                    <a class="m-1" href="http://github.com/Amareteklay/" target="_blank" role="button"><i class="fab fa-github"></i></a>
+                </li>
+                <li class="d-inline-block">
+                    <a class="m-1" href="https://www.youtube.com/channel/UCITdwO40X0bb6JFS5sMetfg" target="_blank" role="button"><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+            <div class="border-top">
+                <p class="text-center small text-white">2022 &copy; <a class="text-salmon" href="{% url 'index' %}">Amareteklay</a></p>
+            </div>
+        </div>
+    </div>
+</aside>

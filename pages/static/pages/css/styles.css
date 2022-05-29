@@ -12,6 +12,12 @@ h3 {
     font-size: 380%;
 }
 
+.row {
+    padding: 0;
+    margin: 0;
+    row-gap: 0 !important;
+}
+
 p {
     font-size: 120%;
     font-weight: 400;
@@ -82,12 +88,12 @@ a.nav-link:active {
 
 .side-bar {
     background-color: rgba(5, 102, 116, 0.75);
-    height: 25vh;
+    height: 100vh;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;
-    min-width: 124px;
+    min-width: 7.75rem;
 }
 
 .img-home-right {

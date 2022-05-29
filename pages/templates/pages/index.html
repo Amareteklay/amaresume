@@ -3,45 +3,40 @@
 {% load static %}
 {% block content %}
 <!-- Main -->
-<div class="container m-0 p-0 mb-0">
-    <div class="row mt-5">
-        <div class="col-md-2 col-0 col-sm-0"></div>
-        <div class="col-md-5 com-sm-12 text-center mt-3">
-            <h4 class="text-muted pt-4">Hello, I'm Amare.</h4>
-            <h5 class="mb-2 py-2"><strong>Software Developer & Economist </strong></h5>
-            <p class="card-text mt-3">Gold mining was my first summer job. Perhaps second. I was a goatherder too.</p>
-            <p>I studied Economics and Software Development. Economic choices and decisions
-                remain perennial. Technology provides tools. Data Science is where both meet.<a class="btn text-salmon" href="{% url 'about' %}">More about me
-                    &raquo;</a></p>
-        </div>
-        <div class="col-md-5 d-md-block d-none">
-            <img src="https://res.cloudinary.com/cloudaman/image/upload/v1652177453/Amareth_bwxkrv.png" class="img-fluid img-home-right" alt="Amare">
-        </div>
+<div class="row mt-5 gx-0">
+    <div class="col-md-6 col-sm-12 text-center mt-3">
+        <h4 class="text-muted pt-4">Hello, I'm Amare.</h4>
+        <h5 class="mb-2 py-2"><strong>Software Developer & Economist </strong></h5>
+        <p class="card-text mt-3">Gold mining was my first summer job. Perhaps second. I was a goatherder too.</p>
+        <p>I studied Economics and Software Development. Economic choices and decisions
+            remain perennial. Technology provides tools. Data Science is where both meet.<a class="btn text-salmon" href="{% url 'about' %}">More about me
+                &raquo;</a></p>
     </div>
+    <div class="col-md-6 me-0 d-md-block d-none">
+        <img src="https://res.cloudinary.com/cloudaman/image/upload/v1652177453/Amareth_bwxkrv.png" class="img-fluid img-home-right" alt="Amare">
+    </div>
+</div>
 
-    <div class="row mt-1">
-        <div class="col-md-5 d-md-block d-none">
-            <img src="https://res.cloudinary.com/cloudaman/image/upload/v1652177451/bird_bhaxnw.png" class="img-fluid img-home-left" alt="bird">
-        </div>
-        <div class="col-md-5 col-sm-12 text-center mt-3">
-            <h4 class="text-muted pt-4">Stories</h4>
-            <h6 class="mb-2 py-2"><strong>I have many stories to tell you. I will try to write as often as possible.</strong>
-            </h6>
-            <p class="card-text mt-3">Follow the link below to see all articles in my blog.</p>
-            <p>Amare's stories: past, present, future are all listed in the blog.<a class="btn text-salmon" href="{% url 'about' %}">Amare's stories &raquo;</a></p>
-        </div>
-        <div class="col-md-1 col-0 col-sm-0"></div>
+<div class="row mt-1 gx-0">
+    <div class="col-md-6 d-md-block d-none">
+        <img src="https://res.cloudinary.com/cloudaman/image/upload/v1652177451/bird_bhaxnw.png" class="img-fluid img-home-left" alt="bird">
     </div>
-    <div class="row mt-5 mb-3">
-        <div class="col-md-2 col-0 col-sm-0"></div>
-        <div class="col-md-5 col-sm-12 text-center mt-3">
-            <h4 class="text-muted pt-4">ትግርኛ/Tigrigna</h4>
-            <p class="card-text mt-3">ብ ትግርኛ ዝፅሕፎም ፅሑፋት ንምርኣይ ኣብ ታሕቲ ዘሎ መንጠሪ ብምጥዋቕ ይኸፍቱ።</p>
-            <p><a class="btn text-salmon" href="{% url 'tiglog' %}">ምርሐኒ &raquo;</a></p>
-        </div>
-        <div class="col-md-5 d-md-block d-none d-sm-none">
-            <img src="https://res.cloudinary.com/cloudaman/image/upload/v1652177449/axum_o6ajeu.jpg" class="img-fluid img-home-right" alt="Axum">
-        </div>
+    <div class="col-md-6 col-sm-12 text-center mt-3">
+        <h4 class="text-muted pt-4">Stories</h4>
+        <h6 class="mb-2 py-2"><strong>I have many stories to tell you. I will try to write as often as possible.</strong>
+        </h6>
+        <p class="card-text mt-3">Follow the link below to see all articles in my blog.</p>
+        <p>Amare's stories: past, present, future are all listed in the blog.<a class="btn text-salmon" href="{% url 'about' %}">Amare's stories &raquo;</a></p>
+    </div>
+</div>
+<div class="row mt-5 mb-3 gx-0">
+    <div class="col-md-6 col-sm-12 text-center mt-3">
+        <h4 class="text-muted pt-4">ትግርኛ/Tigrigna</h4>
+        <p class="card-text mt-3">ብ ትግርኛ ዝፅሕፎም ፅሑፋት ንምርኣይ ኣብ ታሕቲ ዘሎ መንጠሪ ብምጥዋቕ ይኸፍቱ።</p>
+        <p><a class="btn text-salmon" href="{% url 'tiglog' %}">ምርሐኒ &raquo;</a></p>
+    </div>
+    <div class="col-md-6 d-md-block d-none d-sm-none">
+        <img src="https://res.cloudinary.com/cloudaman/image/upload/v1652177449/axum_o6ajeu.jpg" class="img-fluid img-home-right" alt="Axum">
     </div>
 </div>
 {% endblock content %}

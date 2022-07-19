@@ -22,34 +22,9 @@
         {% block sidebar %}
         {% include "pages/sidebar.html" %}
         {% endblock sidebar %}
-        <div class="col-md-10 col-12 p-0">
-            <div class="row pt-3 d-md-block d-sm-none d-none" id="social-icons">
-                <div class="col-md-12 p-0">
-                    <ul class="d-inline-block px-4">
-                        <li class="d-inline-block">
-                            <a class="m-1" href="https://www.facebook.com/amareteklay.hailu" target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="d-inline-block">
-                            <a class="m-1" href="https://twitter.com/Amareteklay" target="_blank" role="button"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="d-inline-block">
-                            <a class="m-1" href="https://www.linkedin.com/in/amareteklay/" target="_blank" role="button"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                        <li class="d-inline-block">
-                            <a class="m-1" href="http://github.com/Amareteklay/" target="_blank" role="button"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li class="d-inline-block">
-                            <a class="m-1" href="https://www.youtube.com/channel/UCITdwO40X0bb6JFS5sMetfg" target="_blank" role="button"><i class="fab fa-youtube"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="col-10 bg-light">
             {% block content %}
             {% endblock content %}
-
-            {% block footer %}
-            {% include "pages/footer.html" %}
-            {% endblock footer %}
         </div>
     </div>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

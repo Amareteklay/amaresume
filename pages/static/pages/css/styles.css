@@ -24,7 +24,7 @@ p {
 }
 
 .left-border {
-    border-left: #056674 90px solid;
+    border-left: #05472a 90px solid;
     line-height: 0.4em;
 }
 
@@ -43,12 +43,12 @@ a.nav-link:active {
 }
 
 .hero-area {
-    background: rgb(1, 120, 126);
+    background: #05472a;
     background: linear-gradient(90deg, rgba(1, 120, 126, 1) 31%, rgba(5, 102, 116, 1) 77%);
 }
 
 .right-cards {
-    background: rgb(1, 120, 126);
+    background: #05472a;
     background: linear-gradient(90deg, rgba(5, 102, 116, 1), 31% rgba(1, 120, 126, 1) 77%);
 }
 
@@ -63,7 +63,7 @@ a.nav-link:active {
 
 .btn-secondary:hover {
     background-color: lightsalmon;
-    border-color: #056674;
+    border-color: #05472a;
 }
 
 
@@ -71,7 +71,7 @@ a.nav-link:active {
     position: absolute;
     left: 230px;
     top: 110px;
-    color: #056674;
+    color: #05472a;
 }
 
 #face-image img {
@@ -87,7 +87,7 @@ a.nav-link:active {
 }
 
 .side-bar {
-    background-color: rgba(5, 102, 116, 0.75);
+    background-color: #05472a !important;
     height: 100vh;
     position: -webkit-sticky;
     position: sticky;
@@ -185,19 +185,19 @@ td {
 
 
 .contact-info {
-    background-color: rgba(5, 102, 116, 0.9);
+    background-color: #05472a;
     border-radius: 0 50% 50% 0;
-    border-left: rgb(5, 102, 116) 2px solid;
-    border-top: #056674 2px solid;
+    border-left: #05472a 2px solid;
+    border-top: #05472a 2px solid;
     color: #fff;
     min-height: 300px;
 }
 
 .contact-form {
-    background-color: rgba(5, 102, 116, 0.9);
+    background-color: #05472a;
     border-radius: 0;
-    border-right: #056674 2px solid;
-    border-bottom: #056674 2px solid;
+    border-right: #05472a 2px solid;
+    border-bottom: #05472a 2px solid;
     color: #fff;
 }
 
@@ -230,7 +230,7 @@ td {
 
 footer,
 .navbar.bg-light {
-    background-color: #056674 !important;
+    background-color: #05472a !important;
 }
 
 .container-fluid {
@@ -285,7 +285,7 @@ footer,
 }
 
 p.d-line {
-    background-color: red;
+    background-color: rgb(31, 41, 50);
     color: blue;
 }
 
@@ -326,7 +326,7 @@ p.d-line {
 
 .nav-masthead .active {
     color: #fff;
-    border-bottom-color: #056674;
+    border-bottom-color: #05472a;
 }
 
 

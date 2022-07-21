@@ -1,22 +1,35 @@
-import email
-#from socket import fromshare
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from .models import Profile
 
 
-class NewUserForm(UserCreationForm):
-    email = forms.EmailField(required=True)
+class UserRegisterForm(UserCreationForm):
+    """
+    Form for a new user to sign up
+    """
+    email = forms.EmailField()
 
     class Meta:
         model = User
-        fields = ("username", "email", "password1", "password2")
+        fields = ['username', 'email', 'password1', 'password2']
 
-    def save(self, commit=True):
-        user = super(NewUserForm, self).save(commit=False)
-        user.email = self.cleaned_data['email']
-        if commit:
-            user.save()
-        return user
 
-    
+class UserUpdateForm(forms.ModelForm):
+    """
+    Create a UserUpdateForm to update username and email
+    """
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+
+
+class ProfileUpdateForm(forms.ModelForm):
+    """
+    Form for a user to update their profile
+    """
+    class Meta:
+        model = Profile
+        fields = ['bio', 'image']

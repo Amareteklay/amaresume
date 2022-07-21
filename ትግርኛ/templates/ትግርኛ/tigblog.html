@@ -8,11 +8,11 @@
             <h1 class="post-title text-center">Quteba Blog</h1>
             {% if user.is_superuser %}
             <div class="text-center my-4">
-                <a href="{% url 'blog:post_create' %}" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Create Blog</a>
+                <a href="{% url 'ትግርኛ:tigpost_create' %}" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Create Blog</a>
             </div>
             {% endif %}
         </div>
-        {% for post in post_list %}
+        {% for post in ልጣፍ_list %}
         <div class="row mt-5 mb-3">
             {% if forloop.counter|divisibleby:2 %}
             <div class="col-5">
@@ -26,29 +26,29 @@
             </div>
             <div class="col-md-12 col-lg-7 px-3">
                 <div class="py-3 px-sm-1 px-0 bg-light">
-                    <a href="{% url 'blog:post_detail' post.slug  %}" class="post-link">
-                        <h2 class="card-title mb-2 pt-2">{{ post.title }}</h2>
+                    <a href="{% url 'ትግርኛ:tigblog_detail' post.ስለግ  %}" class="post-link">
+                        <h2 class="card-title mb-2 pt-2">{{ post.ኣርእስቲ }}</h2>
                     </a>
-                    <img class="rounded-circle article-img profile-img" src="{{ post.author.user_profile.image.url }}" alt="profile image">
-                    {{ post.author|title }}
-                    | <span class="p-1"> {{ post.created_on|date:'d-m-Y'}}</span> <span class="card-text h6"> <i class="far fa-heart"></i>
+                    <img class="rounded-circle article-img profile-img" src="{{ post.ደራሲ.user_profile.image.url }}" alt="ምስሊ ደራሲ">
+                    {{ post.ደራሲ|title }}
+                    | <span class="p-1"> {{ post.ዕለት|date:'d-m-Y'}}</span> <span class="card-text h6"> <i class="far fa-heart"></i>
                         {{ post.number_of_likes }}</span>
-                    <p class="card-text pt-3">{{ post.excerpt|safe }}</p>
-                    <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-success">Read More &raquo;</a>
+                    <p class="card-text pt-3">{{ post.መጠቓለሊ|safe }}</p>
+                    <a href="{% url 'ትግርኛ:tigblog_detail' post.ስለግ  %}" class="btn btn-success">Read More &raquo;</a>
                 </div>
             </div>
             {% else %}
             <div class="col-md-12 col-lg-7 px-3">
                 <div class="py-3 px-sm-1 px-0 bg-light">
-                    <a href="{% url 'blog:post_detail' post.slug  %}" class="post-link">
-                        <h2 class="card-title mb-2 pt-2">{{ post.title }}</h2>
+                    <a href="#" class="post-link">
+                        <h2 class="card-title mb-2 pt-2">{{ post.ኣርእስቲ }}</h2>
                     </a>
-                    <img class="rounded-circle article-img profile-img" src="{{ post.author.user_profile.image.url }}" alt="profile image">
-                    {{ post.author|title }}
-                    | <span class="p-1"> {{ post.created_on|date:'d-m-Y'}}</span> <span class="card-text h6"> <i class="far fa-heart"></i>
+                    <img class="rounded-circle article-img profile-img" src="{{ post.ደራሲ.user_profile.image.url }}" alt="ምስሊ ደራሲ">
+                    {{ post.ደራሲ|title }}
+                    | <span class="p-1"> {{ post.ዕለት|date:'d-m-Y'}}</span> <span class="card-text h6"> <i class="far fa-heart"></i>
                         {{ post.number_of_likes }}</span>
-                    <p class="card-text pt-3">{{ post.excerpt|safe }}</p>
-                    <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-success">Read More &raquo;</a>
+                    <p class="card-text pt-3">{{ post.መጠቓለሊ|safe }}</p>
+                    <a href="#" class="btn btn-success">Read More &raquo;</a>
                 </div>
             </div>
             <div class="col-5">

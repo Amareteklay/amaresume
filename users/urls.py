@@ -1,9 +1,18 @@
+from django.contrib.auth import views as auth_views
 from django.urls import path
+from . import views
 
-from . import views 
 
 urlpatterns = [
-    path('register', views.register_request, name="register"),
-    path('login', views.login_request, name="login"),
-    path('logout', views.logout_request, name="logout"),
+    path('', views.profile, name='profile'),
+    path('signup/', views.register, name='signup'),
+    path('login/', auth_views.LoginView.as_view(
+        template_name='account/login.html'),
+        name='login'),
+    path('logout/', auth_views.LogoutView.as_view(
+        template_name='account/logout.html'),
+        name='logout'
+        ),
+    path('<username>/update/', views.update_profile, name='update-profile'),
+    path('<pk>/delete/', views.delete_profile, name='delete-profile')
 ]

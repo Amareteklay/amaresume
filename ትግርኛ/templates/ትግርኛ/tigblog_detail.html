@@ -1,0 +1,90 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid pt-3 px-lg-5">
+    <div class="card-body mx-lg-4 mx-md-2 mx-sm-2 mx-1 px-sm-5 px-4 py-5 shadow-lg bg-light">
+        <div class="row g-0 bg-light">
+            <div class="col-1">
+            </div>
+            <div class="col-md-10">
+                <h1 class="post-title my-3">{{ post.title }}</h1>
+                <img class="rounded-circle article-img profile-img" src="{{ post.author.user_profile.image.url }}" alt="profile image">
+                {{ post.author|title }}
+                <p class="d-block d-sm-inline small">| {{ post.created_on }}</p>
+                {% if user.is_superuser %}
+                <a href="{% url 'blog:edit_post' post.slug %}" class="op-6 px-3 d-block d-sm-inline"><i class="fa-solid fa-pen-to-square"></i> Edit post</a>
+                {% endif %}
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+        <div class="row g-0 bg-light">
+            <div class="col-1">
+            </div>
+            <div class="col-md-10">
+                {{ post.content|safe }}
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url 'blog:post_like' post.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="post_id" value="{{post.slug}}" class="btn p-0">
+                        <i class="fas fa-thumbs-up"></i></button>
+                    {% else %}
+                    <button type="submit" name="post_id" value="{{post.slug}}" class="btn p-0">
+                        <i class="far fa-thumbs-up"></i></button>
+                    {% endif %}
+                </form>
+                {% else %}
+                <span class="text-secondary"><i class="far fa-thumbs-up"></i></span>
+                {% endif %}
+                <span class="text-secondary">{{post.number_of_likes }} </span>
+                {% with comments.count as total_comments %}
+                <strong class="text-secondary ms-3"><i class="fas fa-comments"></i>
+                    {{ total_comments }}</strong>
+                {% endwith %}
+                <hr>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+        <div class="row g-0 border bg-light">
+            <div class="col-1">
+            </div>
+            <div class="col-md-6">
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="small">
+                        <img class="rounded-circle article-img profile-img" src="{% if comment.name.user_profile.image %} {{ comment.name.user_profile.image.url }} {% else %} 'https://res.cloudinary.com/cloudaman/image/upload/v1658163216/default.png' {% endif %}" alt=" profile image">
+                        {{ comment.name.username|title }}
+                        <span class="font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-md-4">
+                {% if has_commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment will be approved soon.
+                </div>
+                {% else %}
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p class="small">Commenting as: {{ user.username|title }}</p>
+                <form class="post-comment-form" method="POST">
+                    {% csrf_token %}
+                    {{ form.body }}
+                    <button type="submit" class="btn btn-signup btn-primary mt-3 mb-3">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

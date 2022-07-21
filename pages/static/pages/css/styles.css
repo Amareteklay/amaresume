@@ -1,15 +1,35 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    background-color: rgba(8, 120, 19, 0.4);
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 140px;
 }
 
 h1,
 h2,
-h3 {
-    font-family: 'Exo', sans-serif;
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rubik', sans-serif;
     font-size: 380%;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
 }
 
 .row {

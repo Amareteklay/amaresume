@@ -1,0 +1,21 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid pt-3 px-lg-5">
+    <div class="row mx-lg-4 mx-md-2 mx-sm-2 mx-1 px-xl-5 px-lg-2 px-1 py-3 shadow-lg bg-light">
+        <div class="col-md-12 mb-3">
+            <div class="content-section p-5">
+                <h2 class="text-center">Create a blog post</h2>
+            </div>
+            <div class="col-8 mt-3 offset-1 offset-md-2 mb-5">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input class="my-3 btn-primary" type="submit" value="Save">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

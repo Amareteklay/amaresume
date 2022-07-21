@@ -1,0 +1,31 @@
+{% extends "pages/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid pt-3 px-lg-5">
+    <div class="row mx-lg-4 mx-md-2 mx-sm-2 mx-1 px-xl-5 px-lg-2 px-1 py-5 shadow bg-light">
+        <div class=" col-md-12 d-md-block">
+            <div class="content-section ps-5">
+                <div class="media pt-3">
+                    <img class="rounded-circle profile-pic" src="{% if user.user_profile.image %} {{ user.user_profile.image.url }} {% else %} 'https://res.cloudinary.com/cloudaman/image/upload/v1658163216/default.png' {% endif %}" alt="profile image">
+                    <div class="media-body">
+                        <h2 class="account-heading">{{ user.username }}</h2>
+                        <p class="text-secondary">{{ user.email }}</p>
+                    </div>
+                </div>
+                <!-- FORM HERE -->
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Profile Info</legend>
+                        {{ u_form|crispy }}
+                        {{ p_form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-success mt-3" type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

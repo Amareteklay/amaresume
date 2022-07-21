@@ -1,0 +1,20 @@
+{% extends "pages/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container pt-3">
+    <div class="row pt-3 pt-l-5">
+        <div class="col-md-8 offset-md-2 bg-light">
+            <div class="content-section p-sm-5 p-2">
+                <form method="POST">
+                    {% csrf_token %}
+                    <h5 class="mb-md-5 mb-sm-1">Are you sure you want to delete your profile?</h5>
+                    <div class="form-group d-inline-block py-5">
+                        <a class="btn btn-primary mt-3 mx-2 mt-sm-1 mb-md-4 d-inline-block" href="{% url 'profile' %}" aria-label="Cancel deletion of the account">Cancel</a>
+                        <button class="btn btn-danger mt-3 mx-2 mt-sm-1 mb-md-4 d-inline-block" type="submit" aria-label="Confirm deletion of the account">Confirm Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

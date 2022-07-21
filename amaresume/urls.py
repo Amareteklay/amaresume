@@ -19,6 +19,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', include('pages.urls')),
+    path('summernote/', include('django_summernote.urls')),
     path('blog/', include('blog.urls')),
     path('ትግርኛ/', include('ትግርኛ.urls')),
     path('users/', include('users.urls')),

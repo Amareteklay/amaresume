@@ -70,27 +70,27 @@ class TigPostDetail(LoginRequiredMixin, View):
             },
         )
 
-    def post(self, request, ስለግ, *args, **kwargs):
+    def post(self, request, pk, *args, **kwargs):
         queryset = ልጣፍ.objects.filter(ምድብ=1)
-        ልጣፍ = get_object_or_404(queryset, ስለግ=ስለግ)
-        comments = ልጣፍ.tigcomments.filter(ፀዲቑ=True).order_by('ዕለት')
+        tigpost = get_object_or_404(queryset, pk=pk)
+        comments = tigpost.tigcomments.filter(ፀዲቑ=True).order_by('ዕለት')
         liked = False
-        if ልጣፍ.ፈተውቲ.filter(id=self.request.user.id).exists():
+        if tigpost.ፈተውቲ.filter(id=self.request.user.id).exists():
             liked = True
         form = ቅጥዒርእይቶ(data=request.POST)
         if form.is_valid():
             form.instance.ኢመይል = request.user.email
             form.instance.ሽም = request.user
-            ርእይቶ = form.save(commit=False)
-            ርእይቶ.ልጣፍ = ልጣፍ
-            ርእይቶ.save()
+            tigcomment = form.save(commit=False)
+            tigcomment.ልጣፍ = tigpost
+            tigcomment.save()
         else:
             form = ቅጥዒርእይቶ()
         return render(
             request,
             "ትግርኛ/tigblog_detail.html",
             {
-                "post": ልጣፍ,
+                "post": tigpost,
                 "has_commented": True,
                 "comments": comments,
                 "liked": liked,
@@ -104,9 +104,9 @@ class PostLike(View, LoginRequiredMixin):
     Like blog post
     """
     def post(self, request, pk):
-        ልጣፍ = get_object_or_404(ልጣፍ, pk=pk)
-        if ልጣፍ.ፈተውቲ.filter(id=request.user.id).exists():
-            ልጣፍ.ፈተውቲ.remove(request.user)
+        tigpost = get_object_or_404(ልጣፍ, pk=pk)
+        if tigpost.ፈተውቲ.filter(id=request.user.id).exists():
+            tigpost.ፈተውቲ.remove(request.user)
         else:
-            ልጣፍ.ፈተውቲ.add(request.user)
-        return HttpResponseRedirect(reverse('ትግርኛ:tigblog_detail', pk=pk))
+            tigpost.ፈተውቲ.add(request.user)
+        return HttpResponseRedirect(reverse('ትግርኛ:tigblog_detail', args=[pk]))

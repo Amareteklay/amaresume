@@ -8,12 +8,12 @@
             <div class="col-1">
             </div>
             <div class="col-md-10">
-                <h1 class="post-title my-3">{{ post.title }}</h1>
-                <img class="rounded-circle article-img profile-img" src="{{ post.author.user_profile.image.url }}" alt="profile image">
-                {{ post.author|title }}
-                <p class="d-block d-sm-inline small">| {{ post.created_on }}</p>
+                <h1 class="post-title my-3">{{ post.ኣርእስቲ }}</h1>
+                <img class="rounded-circle article-img profile-pic" src="{{ post.ደራሲ.user_profile.image.url }}" alt="profile image">
+                {{ post.ደራሲ|title }}
+                <p class="d-block d-sm-inline small">| {{ post.ዕለት|date:'d-m-Y' }}</p>
                 {% if user.is_superuser %}
-                <a href="{% url 'blog:edit_post' post.pk %}" class="op-6 px-3 d-block d-sm-inline"><i class="fa-solid fa-pen-to-square"></i> Edit post</a>
+                <a href="{% url 'ትግርኛ:edit_tigpost' post.pk %}" class="op-6 px-3 d-block d-sm-inline"><i class="fa-solid fa-pen-to-square"></i> መልበብ</a>
                 {% endif %}
             </div>
             <div class="col-1">
@@ -23,9 +23,9 @@
             <div class="col-1">
             </div>
             <div class="col-md-10">
-                {{ post.content|safe }}
+                {{ post.ትሕዝቶ|safe }}
                 {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'blog:post_like' post.pk %}" method="POST">
+                <form class="d-inline" action="{% url 'ትግርኛ:tigpost_like' post.pk %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
                     <button type="submit" name="post_id" value="{{post.pk}}" class="btn p-0">
@@ -56,12 +56,12 @@
                 <div class="comments" style="padding: 10px;">
                     <p class="small">
                         <img class="rounded-circle article-img profile-img" src="{% if comment.name.user_profile.image %} {{ comment.name.user_profile.image.url }} {% else %} 'https://res.cloudinary.com/cloudaman/image/upload/v1658163216/default.png' {% endif %}" alt=" profile image">
-                        {{ comment.name.username|title }}
+                        {{ comment.ሽም.username|title }}
                         <span class="font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
+                            {{ comment.ዕለት }}
+                        </span> እንትይፅሕፍ፦
                     </p>
-                    {{ comment.body | linebreaks }}
+                    {{ comment.ትሕዝቶ | linebreaks }}
                 </div>
                 {% endfor %}
             </div>
@@ -70,16 +70,16 @@
             <div class="col-md-4">
                 {% if has_commented %}
                 <div class="alert alert-success" role="alert">
-                    Your comment will be approved soon.
+                    ክብረት ይሃበልና።
                 </div>
                 {% else %}
                 {% if user.is_authenticated %}
-                <h3>Leave a comment:</h3>
-                <p class="small">Commenting as: {{ user.username|title }}</p>
+                <h3>ርእይቶ መውሃቢ፦</h3>
+                <p class="small">ውሃቢ ርእይቶ፦ {{ user.username|title }}</p>
                 <form class="post-comment-form" method="POST">
                     {% csrf_token %}
-                    {{ form.body }}
-                    <button type="submit" class="btn btn-signup btn-primary mt-3 mb-3">Submit</button>
+                    {{ form.ትሕዝቶ }}
+                    <button type="submit" class="btn btn-signup btn-primary mt-3 mb-3">ኣብፅሕ</button>
                 </form>
                 {% endif %}
                 {% endif %}

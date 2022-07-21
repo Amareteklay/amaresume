@@ -23,7 +23,7 @@ h4,
 h5,
 h6 {
     font-family: 'Rubik', sans-serif;
-    font-size: 380%;
+    font-size: 280%;
 }
 
 p {
@@ -38,9 +38,8 @@ p {
     row-gap: 0 !important;
 }
 
-p {
-    font-size: 120%;
-    font-weight: 400;
+.bg-deep-greed {
+    background-color: #05472a;
 }
 
 .left-border {
@@ -86,6 +85,12 @@ a.nav-link:active {
     border-color: #05472a;
 }
 
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    border: 0;
+}
 
 #hero-text {
     position: absolute;
@@ -98,6 +103,17 @@ a.nav-link:active {
     width: 160px;
     height: 160px;
     border-radius: 80px;
+
+}
+
+.gradient-bg-1 {
+    background-color: #21D4FD;
+    background-image: linear-gradient(270deg, #21D4FD 0%, #B721FF 100%);
+}
+
+.gradient-bg-2 {
+    background-color: #0093E9;
+    background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%);
 
 }
 
@@ -114,6 +130,17 @@ a.nav-link:active {
     top: 0;
     left: 0;
     min-width: 7.75rem;
+}
+
+.active-menu {
+    border-bottom: 2px lightsalmon solid;
+
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 40% 0;
 }
 
 .img-home-right {
@@ -133,20 +160,18 @@ a.nav-link:active {
     background-repeat: no-repeat;
     background-position: center;
     min-height: 450px;
-    width: 50%;
     opacity: 0.5;
     border-radius: 450px 0 0 450px;
 }
 
 #project-quteba {
-    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1652177449/quteba_kn0fka.png");
+    background-image: url("https://res.cloudinary.com/cloudaman/image/upload/v1658257415/m2k48j4vusn8yh1wtxik.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 450px;
-    width: 50%;
     border-radius: 0 300px 300px 0;
-    margin-left: 10px;
+
 }
 
 #project-quiz {
@@ -155,9 +180,7 @@ a.nav-link:active {
     background-position: center;
     background-size: cover;
     min-height: 450px;
-    width: 50%;
     border-radius: 300px 0 0 300px;
-    margin-right: 0;
 }
 
 #project-game {
@@ -166,9 +189,7 @@ a.nav-link:active {
     background-size: cover;
     background-position: center;
     min-height: 450px;
-    width: 50%;
     border-radius: 0 300px 300px 0;
-    margin-left: 10px;
 }
 
 #project-jung {
@@ -177,9 +198,7 @@ a.nav-link:active {
     background-position: center;
     background-size: cover;
     min-height: 450px;
-    width: 50%;
     border-radius: 300px 0 0 300px;
-    margin-right: 0;
 }
 
 #social-icons {
@@ -199,7 +218,8 @@ td {
 
 .about-page {
     margin-left: 1px;
-    background-color: rgba(51, 51, 51, 0.2);
+    background-color: #21D4FD;
+    background-image: linear-gradient(270deg, #21D4FD 0%, #B721FF 100%);
     border-radius: 50% 0 50% 0;
 }
 

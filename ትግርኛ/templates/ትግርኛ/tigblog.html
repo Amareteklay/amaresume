@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container-fluid pt-3 px-lg-5">
-    <div class="row mx-lg-4 mx-md-2 mx-sm-2 mx-1 px-xl-5 px-lg-2 px-1 py-5 shadow-lg bg-light">
+    <div class="row mx-lg-4 mx-md-2 mx-sm-2 mx-1 px-xl-5 px-lg-2 px-1 py-5 bg-light">
         <div class=" col-md-12 d-md-block mb-3">
             <h1 class="post-title text-center">Quteba Blog</h1>
             {% if user.is_superuser %}
@@ -13,55 +13,58 @@
             {% endif %}
         </div>
         {% for post in ልጣፍ_list %}
-        <div class="row mt-5 mb-3">
-            {% if forloop.counter|divisibleby:2 %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="row mt-5 mb-3 gradient-bg-2">
             <div class="col-5">
                 <div class="bg-light d-none d-sm-none d-md-none d-lg-block">
-                    {% if "placeholder" in post.featured_image.url %}
+                    {% if "placeholder" in post.ምስሊ.url %}
                     <img class="featured-image" src="https://res.cloudinary.com/cloudaman/image/upload/v1653860402/cdrfymnr2arymbo9wfwe.png" alt="Featured image">
                     {% else %}
-                    <img class="featured-image" src=" {{ post.featured_image.url }}" alt="Featured image">
+                    <img class="featured-image" src=" {{ post.ምስሊ.url }}" alt="Featured image">
                     {% endif %}
                 </div>
             </div>
             <div class="col-md-12 col-lg-7 px-3">
                 <div class="py-3 px-sm-1 px-0 bg-light">
-                    <a href="{% url 'ትግርኛ:tigblog_detail' post.ስለግ  %}" class="post-link">
+                    <a href="{% url 'ትግርኛ:tigblog_detail' post.pk  %}" class="post-link">
                         <h2 class="card-title mb-2 pt-2">{{ post.ኣርእስቲ }}</h2>
                     </a>
-                    <img class="rounded-circle article-img profile-img" src="{{ post.ደራሲ.user_profile.image.url }}" alt="ምስሊ ደራሲ">
+                    <img class="rounded-circle article-img profile-pic" src="{{ post.ደራሲ.user_profile.image.url }}" alt="ምስሊ ደራሲ">
                     {{ post.ደራሲ|title }}
                     | <span class="p-1"> {{ post.ዕለት|date:'d-m-Y'}}</span> <span class="card-text h6"> <i class="far fa-heart"></i>
                         {{ post.number_of_likes }}</span>
                     <p class="card-text pt-3">{{ post.መጠቓለሊ|safe }}</p>
-                    <a href="{% url 'ትግርኛ:tigblog_detail' post.ስለግ  %}" class="btn btn-success">Read More &raquo;</a>
+                    <a href="{% url 'ትግርኛ:tigblog_detail' post.pk  %}" class="btn btn-success">Read More &raquo;</a>
                 </div>
             </div>
-            {% else %}
-            <div class="col-md-12 col-lg-7 px-3">
-                <div class="py-3 px-sm-1 px-0 bg-light">
-                    <a href="#" class="post-link">
-                        <h2 class="card-title mb-2 pt-2">{{ post.ኣርእስቲ }}</h2>
-                    </a>
-                    <img class="rounded-circle article-img profile-img" src="{{ post.ደራሲ.user_profile.image.url }}" alt="ምስሊ ደራሲ">
-                    {{ post.ደራሲ|title }}
-                    | <span class="p-1"> {{ post.ዕለት|date:'d-m-Y'}}</span> <span class="card-text h6"> <i class="far fa-heart"></i>
-                        {{ post.number_of_likes }}</span>
-                    <p class="card-text pt-3">{{ post.መጠቓለሊ|safe }}</p>
-                    <a href="#" class="btn btn-success">Read More &raquo;</a>
-                </div>
-            </div>
-            <div class="col-5">
-                <div class="bg-light d-none d-sm-none d-md-none d-lg-block">
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img class="featured-image" src="https://res.cloudinary.com/cloudaman/image/upload/v1653860402/cdrfymnr2arymbo9wfwe.png" alt="Featured image">
-                    {% else %}
-                    <img class="featured-image" src=" {{ post.featured_image.url }}" alt="Featured image">
-                    {% endif %}
-                </div>
-            </div>
-            {% endif %}
         </div>
+        {% else %}
+        <div class="row mt-5 mb-3 gradient-bg-1">
+            <div class="col-md-12 col-lg-7 px-3">
+                <div class="py-3 px-sm-1 px-0 bg-light">
+                    <a href="{% url 'ትግርኛ:tigblog_detail' post.pk  %}" class="post-link">
+                        <h2 class="card-title mb-2 pt-2">{{ post.ኣርእስቲ }}</h2>
+                    </a>
+                    <img class="rounded-circle article-img profile-pic" src="{{ post.ደራሲ.user_profile.image.url }}" alt="ምስሊ ደራሲ">
+                    {{ post.ደራሲ|title }}
+                    | <span class="p-1"> {{ post.ዕለት|date:'d-m-Y'}}</span> <span class="card-text h6"> <i class="far fa-heart"></i>
+                        {{ post.number_of_likes }}</span>
+                    <p class="card-text pt-3">{{ post.መጠቓለሊ|safe }}</p>
+                    <a href="{% url 'ትግርኛ:tigblog_detail' post.pk  %}" class="btn btn-success">Read More &raquo;</a>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="bg-light d-none d-sm-none d-md-none d-lg-block">
+                    {% if "placeholder" in post.ምስሊ.url %}
+                    <img class="featured-image" src="https://res.cloudinary.com/cloudaman/image/upload/v1653860402/cdrfymnr2arymbo9wfwe.png" alt="Featured image">
+                    {% else %}
+                    <img class="featured-image" src=" {{ post.ምስሊ.url }}" alt="Featured image">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
         {% endfor %}
         {% if is_paginated %}
         <nav aria-label="Page navigation">

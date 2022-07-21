@@ -3,13 +3,13 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="container-fluid pt-3 px-lg-5">
-    <div class="card-body mx-lg-4 mx-md-2 mx-sm-2 mx-1 px-sm-5 px-4 py-5 shadow-lg bg-light">
+    <div class="card-body mx-lg-4 mx-md-2 mx-sm-2 mx-1 px-sm-5 px-4 py-5 bg-light">
         <div class="row g-0 bg-light">
             <div class="col-1">
             </div>
             <div class="col-md-10">
                 <h1 class="post-title my-3">{{ post.title }}</h1>
-                <img class="rounded-circle article-img profile-img" src="{{ post.author.user_profile.image.url }}" alt="profile image">
+                <img class="rounded-circle article-img profile-pic" src="{{ post.author.user_profile.image.url }}" alt="profile image">
                 {{ post.author|title }}
                 <p class="d-block d-sm-inline small">| {{ post.created_on }}</p>
                 {% if user.is_superuser %}

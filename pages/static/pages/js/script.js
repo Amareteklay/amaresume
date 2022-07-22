@@ -1,12 +1,12 @@
 // Function to display and hide alert messages.
-setTimeout(function() {
+/* setTimeout(function() {
         let messagesBox = document.getElementById('messages-notes');
         if (messagesBox) {
             messagesBox.style.display = 'none';
         }
     },
     2500);
-
+ */
 // Add event listener to menu items in navbar
 document.addEventListener('DOMContentLoaded', function() {
     const navbarItems = document.getElementsByClassName('nav-link');
